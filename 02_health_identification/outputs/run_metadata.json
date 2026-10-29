@@ -1,0 +1,46 @@
+{
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "maximum_sequence_length": 128,
+  "embedding_aggregation": "token-weighted mean of non-overlapping passages, L2 normalized",
+  "umap": {
+    "n_neighbors": 15,
+    "n_components": 5,
+    "min_dist": 0.0,
+    "metric": "cosine",
+    "random_state": 42
+  },
+  "hdbscan": {
+    "min_cluster_size": 100,
+    "min_samples": 10,
+    "metric": "euclidean",
+    "cluster_selection_method": "eom"
+  },
+  "vectorizer": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 20000
+  },
+  "main_health_topics": [
+    0
+  ],
+  "extended_health_topics": [
+    0,
+    14
+  ],
+  "eligible_speeches": 49629,
+  "main_health_speeches": 3415,
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "sentence-transformers": "5.7.0",
+    "bertopic": "0.17.4",
+    "umap-learn": "0.5.12",
+    "hdbscan": "0.8.44",
+    "scikit-learn": "1.6.1",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "pyarrow": "23.0.1"
+  }
+}
