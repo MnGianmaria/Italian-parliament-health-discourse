@@ -1,0 +1,73 @@
+{
+  "repository": "https://github.com/MnGianmaria/Italian-parliament-health-discourse",
+  "inputs": {
+    "health": {
+      "url": "https://raw.githubusercontent.com/MnGianmaria/Italian-parliament-health-discourse/main/02_health_identification/outputs/corpus_health_bertopic.parquet",
+      "sha256": "6e724188b6d8e34f3c057965f1f062104649c1ca592367fc37a22ea6c337e357"
+    },
+    "embeddings": {
+      "url": "https://media.githubusercontent.com/media/MnGianmaria/Italian-parliament-health-discourse/main/02_health_identification/outputs/speech_embeddings.npz",
+      "sha256": "b46c0a136c29e8c60a1a5fb306e3506b3ba6e13d1fa77cde5c3138b7525f2c22"
+    },
+    "prepared": {
+      "url": "https://media.githubusercontent.com/media/MnGianmaria/Italian-parliament-health-discourse/main/data/processed/corpus_prepared.parquet",
+      "sha256": "c3a78f667dc3962ddf06d24b1506962e2cc52fc06d6763e1bae87865f51c8797"
+    },
+    "selection": {
+      "url": "https://raw.githubusercontent.com/MnGianmaria/Italian-parliament-health-discourse/main/02_health_identification/outputs/bertopic_selection.parquet",
+      "sha256": "a533804180c7b3b7004f17859ffcdf46ad81a4933589a7ba555b13a1c654afc2"
+    }
+  },
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "embedding_dimensions": 384,
+  "main_health_records": 3415,
+  "main_five_party_records": 2400,
+  "extended_five_party_records": 2745,
+  "parties": [
+    "PD",
+    "FdI",
+    "M5S",
+    "FI",
+    "Lega"
+  ],
+  "period_years": {
+    "2018–2019": [
+      2018,
+      2019
+    ],
+    "2020": [
+      2020
+    ],
+    "2021–2022": [
+      2021,
+      2022
+    ]
+  },
+  "party_labels": "Source ItaParlCorpus categories, without affiliation corrections",
+  "health_topics": {
+    "main": [
+      0
+    ],
+    "extended": [
+      0,
+      14
+    ]
+  },
+  "profile": "L2-normalized mean of unit speech embeddings; equal weight per speech",
+  "distance": "cosine",
+  "linkage": "average",
+  "bootstrap": {
+    "unit": "debate date, shared across parties within each period",
+    "repetitions": 500,
+    "seed": 42,
+    "interval": "pointwise percentile 95%, unadjusted for multiple comparisons"
+  },
+  "versions": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.0",
+    "pyarrow": "23.0.1",
+    "requests": "2.32.4"
+  }
+}
