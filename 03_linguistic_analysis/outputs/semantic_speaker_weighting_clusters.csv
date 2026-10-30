@@ -1,0 +1,4 @@
+period,main_split,speaker_weighted_split,same_split
+2018–2019,"(('FI', 'FdI', 'PD'), ('Lega', 'M5S'))","(('FI', 'FdI', 'Lega', 'PD'), ('M5S',))",False
+2020,"(('FI', 'FdI', 'Lega'), ('M5S', 'PD'))","(('FI', 'FdI', 'Lega'), ('M5S', 'PD'))",True
+2021–2022,"(('FI', 'Lega', 'M5S', 'PD'), ('FdI',))","(('FI', 'Lega', 'M5S', 'PD'), ('FdI',))",True
