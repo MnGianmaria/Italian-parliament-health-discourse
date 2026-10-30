@@ -82,3 +82,20 @@ git lfs install
 git clone https://github.com/MnGianmaria/Italian-parliament-health-discourse.git
 cd Italian-parliament-health-discourse
 git lfs pull
+```
+
+Run metadata records input checksums, software versions and analysis settings. Speech identifiers preserve alignment between texts, embeddings and outputs.
+
+## Interpretation and limitations
+
+Party labels are inherited from ItaParlCorpus without manual affiliation corrections and may differ from parliamentary affiliations at the date of a speech.
+
+Health selections are exploratory and lack validated precision and recall estimates. Semantic proximity can reflect shared subjects, framing or style even when speakers defend opposing positions. Averaging can conceal differences within parties.
+
+Samples differ in size and composition. Coverage is partial in 2018 and 2022; 2020 includes pre-emergency months, while 2021–2022 remains a pandemic period. Bootstrap intervals are pointwise, unadjusted for multiple comparisons and conditional on the saved model, labels and selection. Dependence across debate dates is not explicitly modelled.
+
+## Relation to the original project
+
+This is an individual extension by **Gianmaria Monaco** of *From Lockdown to Lexicon: How COVID-19 Changed Italy’s Health Parliamentary Discourse*, jointly authored by **Sara Bernardoni, Franz Janssen, Filippo Loreto, Gianmaria Monaco and Francesca Muriano** for **20886 — Foundations of Social Sciences — Module I (Empirical Research Methods and Data Analysis)** at Bocconi University.
+
+The present extension rebuilds the preparation and analysis workflow and develops semantic comparisons across individual party categories. Its additional analyses and interpretations are the responsibility of Gianmaria Monaco.
